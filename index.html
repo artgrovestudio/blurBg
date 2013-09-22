@@ -28,6 +28,9 @@
     			})
     			.offset({top:y,left:x});
     			$('.overlay').blurBg(24);
+    			setTimeout(
+    			function(){
+    			$('.overlay').fadeOut(2000)},1000);
     		});
     	});
     </script>
