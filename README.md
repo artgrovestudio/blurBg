@@ -9,8 +9,18 @@ Usage
 =====
 
 Using is very simple.
+````
 $(element).blurBg(radius);
-"Radius" - radius of blur. For example $('.overlay').blurBg(24);
+````
+"Radius" - radius of blur. For example:
+````
+$('.overlay').blurBg(24);
+````
 You can ask it to put/impose a color to background in second parameter:
+````
 $(element).blurBg(radius, color);
-For example $('.overlay').blurBg(24, "rgba(255, 255, 255, 0.5");
+````
+For example:
+````
+$('.overlay').blurBg(24, "rgba(255, 255, 255, 0.5");
+````
