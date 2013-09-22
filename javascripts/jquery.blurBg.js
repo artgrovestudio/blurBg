@@ -2946,7 +2946,7 @@ function stackBlurCanvasRGB(canvas, top_x, top_y, width, height, radius) {
     if (isNaN(radius) || radius < 1) return;
     radius |= 0;
 
-    var canvas  = document.getElementById( id );
+    //var canvas  = document.getElementById( id );
     var context = canvas.getContext("2d");
     var imageData;
 

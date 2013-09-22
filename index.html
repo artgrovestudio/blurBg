@@ -27,6 +27,7 @@
     				'height':h
     			})
     			.offset({top:y,left:x});
+    			$('.overlay').blurBg(24);
     		});
     	});
     </script>
@@ -63,10 +64,10 @@ This was done in the style of iOS 7, which uses this concept.</p>
 
 <p>You can try it in work here.
 Write a coordinates of blured overlay, then click "Blur It!".
-Position from left:  <input class="x"><br>
-Position from right: <input class="y"><br>
-Width: <input class="w"><br>
-Height:<input class="h"><br>
+Position from left:  <input class="x" value="300"><br>
+Position from top: <input class="y" value="100"><br>
+Width: <input class="w" value="1000"><br>
+Height:<input class="h" value="400"><br>
 <button class="blur">Blur It!</button>
 </p>
 
