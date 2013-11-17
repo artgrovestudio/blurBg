@@ -3170,12 +3170,17 @@ function BlurStack() {
     this.next = null;
 }
 ;(function($) {
-    $.fn.blurBg = function(radius, fill) {
+    $.fn.blurBg = function(radius, fill, rect) {
         var ele = this;
         var html = $(ele).html();
-        var position = $(ele).position();
-        var height = $(ele).height();
-        var width = $(ele).width();
+        var position = $(ele).offset();
+        if(typeof(rect) != 'undefined'){
+            var width = rect[0];
+            var height = rect[1];
+        } else {
+            var height = $(ele).height();
+            var width = $(ele).width();
+        }
         var scroll = $(window).scrollTop();
         $(ele).html('');
         html2canvas($('body'), {
@@ -3187,7 +3192,7 @@ function BlurStack() {
                 var ctx = extra_canvas.getContext('2d');
                 ctx.drawImage(canvas,position.left,position.top,width,height,0,0,width,height);
 
-                stackBlurCanvasRGB(extra_canvas, 0, 0, width, height, radius)
+                stackBlurCanvasRGB(extra_canvas, 0, 0, width, height, radius);
                 if(typeof(fill) != 'undefined'){
                     ctx.fillStyle = fill;
                     ctx.fillRect(0, 0, width, height);
